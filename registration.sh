@@ -1,8 +1,8 @@
 #!/bin/bash
 echo "user registration system ensureing all validation "
-read -p "enter a mobile number " mob
-pat='^(([[0-9]{2})+[ ]([0-9]{10})+)$'
-if [ $mob =~ $pat ]
+read -p "enter a password " pass
+pat='[a-zA-Z0-9!?]{8,}'
+if [ $pass =~ $pat ]
 then
 echo "valid"
 else
