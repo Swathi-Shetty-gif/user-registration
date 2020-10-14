@@ -1,8 +1,8 @@
 #!/bin/bash
 echo "user registration system ensureing all validation "
-read -p "enter a password with a special case " spepass
-pat='^(?=.*[A-Z])(?=.*[0-9])(?=.*[!-+$@])[A-Za-z0-9!-+$@]{8,}$'
-if [ $spepass =~ $pat ]
+read -p "clear email" email
+pat=''^[a-zA-Z0-9]+([.+-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+.[a-z]{2,4}([.,])*([a-z]{2,3})*$'
+if [ $email =~ $pat ]
 then
 echo "valid"
 else
