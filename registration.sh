@@ -1,8 +1,8 @@
 #!/bin/bash
 echo "user registration system ensureing all validation "
-read -p "enter a password " pass
-pat='[A-Z]{1,}[a-zA-Z0-9!?]{8,}'
-if [ $pass =~ $pat ]
+read -p "enter a password with a one upper case " upass
+pat='^(?=[A-Z])[a-zA-Z]{8,}$'
+if [ $upass =~ $pat ]
 then
 echo "valid"
 else
